@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canım Arkadaşım Britney’m ♡</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;500&display=swap');
+    body{margin:0;height:100vh;background:linear-gradient(-45deg,#e0bbff,#ffb3ff,#c689ff,#ff99cc);background-size:500% 500%;animation:g 15s ease infinite;color:#fff;font-family:'Poppins',sans-serif;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}
+    @keyframes g{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+    .kutu{padding:60px 40px;border-radius:40px;background:rgba(255,255,255,0.18);backdrop-filter:blur(20px);box-shadow:0 30px 60px rgba(0,0,0,0.25);max-width:92%;line-height:2.6}
+    h1{font-family:'Dancing Script',cursive;font-size:6.5rem;margin-bottom:50px;animation:parlak 3s ease-in-out infinite alternate}
+    @keyframes parlak{from{text-shadow:0 0 30px rgba(255,105,180,0.6)}to{text-shadow:0 0 50px rgba(255,105,180,1)}}
+    p{font-size:2.2rem;font-weight:300;margin:18px 0}
+    .kalp{font-size:4.5rem;display:block;margin:60px 0;animation:atiyor 1.8s ease infinite}
+    @keyframes atiyor{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+    button{background:rgba(255,105,180,0.9);border:none;color:#fff;padding:18px 40px;font-size:1.6rem;border-radius:50px;cursor:pointer;margin-top:40px;transition:.3s}
+    button:hover{transform:scale(1.1);background:#ff69b4}
+    .yildiz{position:absolute;width:5px;height:5px;background:#fff;border-radius:50%;box-shadow:0 0 12px #fff;animation:akis 8s linear infinite}
+    @keyframes akis{0%{opacity:0;transform:translateY(-100vh)}10%{opacity:1}90%{opacity:1}100%{opacity:0;transform:translateY(100vh)}}
+  </style>
+</head>
+<body>
+
+  <div class="kutu">
+    <h1>Canım Arkadaşım</h1>
+
+    <p>Biliyorsun ya, seninle geçirdiğim her saniye zaten yeter bana</p>
+    <p>En zor günümde bir mesajınla gülümsetiyorsun</p>
+    <p>En mutlu günümde ilk sana koşuyorum</p>
+
+    <span class="kalp">♡</span>
+
+    <p>Arada saçma sapan tartışsak da</p>
+    <p>Bir şekilde yine birbirimizi buluyoruz</p>
+
+    <p>Ne olursa olsun, nerde olursan ol</p>
+    <p>Beni ara, yaz, kapıma dayan…</p>
+    <p>Ben hep burdayım, hep olacağım</p>
+
+    <p>Seni çok seviyorum  iyi ki varsın</p>
+    <p>iyi ki seninle aynı yolda yürüyorum ♡</p>
+
+    <button onclick="document.getElementById('sarki').play(); this.style.display='none'">Müziği Aç ♡</button>
+  </div>
+
+  <audio id="sarki" loop>
+    <source src="britney.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    setInterval(()=>{let y=document.createElement('div');y.classList.add('yildiz');y.style.left=Math.random()*100+'vw';y.style.animationDuration=Math.random()*5+4+'s';document.body.appendChild(y);setTimeout(()=>y.remove(),9000)},300);
+  </script>
+</body>
+</html>
